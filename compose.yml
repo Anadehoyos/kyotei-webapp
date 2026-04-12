@@ -16,8 +16,9 @@ services:
         dockerfile: ../scms-deploy/webapp/Dockerfile
       volumes:
         - ../scms-webapp:/webapp
+        - webapp-node-modules:/webapp/node_modules
       ports:
-        - "${WEBAPP_PORT}:80"
+        - "${WEBAPP_PORT}:5173"
       networks:
         - scms_webapp_network
         - scms_api_network
@@ -59,4 +60,5 @@ networks:
 volumes:
   api-db-vol:
   webapp-db-vol:
+  webapp-node-modules:
 
