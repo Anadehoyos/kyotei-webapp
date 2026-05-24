@@ -16,9 +16,9 @@ function Btn({
   onClick?: () => void;
 }) {
   const sizes: Record<BtnSize, string> = {
-    sm: "px-3 py-[5px] text-xs",
+    sm: "px-3 py-1.25 text-xs",
     md: "px-4 py-2 text-[13px]",
-    lg: "px-[22px] py-[11px] text-sm",
+    lg: "px-5.5 py-2.75 text-sm",
   };
   const variants: Record<BtnVariant, string> = {
     filled: "bg-ky-accent hover:bg-ky-accent-dark text-white border-0",
@@ -167,10 +167,10 @@ export default function App() {
   return (
     <div className="bg-ky-bg text-ky-text font-sans">
       {/* Navbar */}
-      <nav className="sticky top-0 z-[100] border-b border-ky-border bg-[rgba(8,11,16,0.9)] backdrop-blur-xl">
-        <div className="max-w-[1100px] mx-auto px-8 h-[60px] flex items-center justify-between">
+      <nav className="sticky top-0 z-100 border-b border-ky-border bg-[rgba(8,11,16,0.9)] backdrop-blur-xl">
+        <div className="max-w-275 mx-auto px-8 h-15 flex items-center justify-between">
           <div className="flex items-baseline gap-1">
-            <span className="text-[18px] font-extrabold tracking-[-0.03em]">
+            <span className="text-lg font-extrabold tracking-[-0.03em]">
               Kyōtei
             </span>
             <span className="text-[10px] text-ky-accent font-medium">協定</span>
@@ -187,10 +187,10 @@ export default function App() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-[1100px] mx-auto px-8 pt-[88px] pb-[72px] relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse,rgba(59,130,246,0.09)_0%,transparent_70%)] pointer-events-none" />
-        <div className="text-center max-w-[740px] mx-auto">
-          <div className="inline-flex items-center gap-2 px-[14px] py-[5px] rounded-full bg-ky-accent/12 border border-ky-accent/20 mb-7 text-xs font-semibold text-ky-accent tracking-[0.04em]">
+      <section className="max-w-275 mx-auto px-8 pt-22 pb-18 relative">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-125 bg-[radial-gradient(ellipse,rgba(59,130,246,0.09)_0%,transparent_70%)] pointer-events-none" />
+        <div className="text-center max-w-185 mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.25 rounded-full bg-ky-accent/12 border border-ky-accent/20 mb-7 text-xs font-semibold text-ky-accent tracking-[0.04em]">
             <span className="w-1.5 h-1.5 rounded-full bg-ky-accent animate-pulse" />
             Gestión contractual · Latinoamérica
           </div>
@@ -201,7 +201,7 @@ export default function App() {
             proveedor
           </h1>
 
-          <p className="text-[17px] text-ky-muted leading-[1.7] mb-9 max-w-[540px] mx-auto">
+          <p className="text-[17px] text-ky-muted leading-[1.7] mb-9 max-w-135 mx-auto">
             Kyōtei centraliza proveedores, contratos y documentos corporativos
             en una sola plataforma segura, con alertas inteligentes y control de
             acceso por roles.
@@ -218,17 +218,17 @@ export default function App() {
 
           {/* Dashboard preview */}
           <div className="bg-ky-card border border-ky-border-md rounded-[14px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.6)]">
-            <div className="bg-ky-bg-alt border-b border-ky-border px-[18px] py-2.5 flex items-center gap-2">
+            <div className="bg-ky-bg-alt border-b border-ky-border px-4.5 py-2.5 flex items-center gap-2">
               <div className="flex gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full bg-[#ef444488]" />
-                <div className="w-2.5 h-2.5 rounded-full bg-[#eab30888]" />
-                <div className="w-2.5 h-2.5 rounded-full bg-[#22c55e88]" />
+                <div className="w-2.5 h-2.5 rounded-full bg-ky-red/53" />
+                <div className="w-2.5 h-2.5 rounded-full bg-ky-amber/53" />
+                <div className="w-2.5 h-2.5 rounded-full bg-ky-green/53" />
               </div>
               <span className="text-[11px] text-ky-faint ml-2">
                 app.kyotei.com.pa — Dashboard
               </span>
             </div>
-            <div className="grid grid-cols-[160px_1fr] min-h-[240px]">
+            <div className="grid grid-cols-[160px_1fr] min-h-60">
               <div className="border-r border-ky-border py-3">
                 {[
                   "Dashboard",
@@ -239,7 +239,7 @@ export default function App() {
                 ].map((item, i) => (
                   <div
                     key={item}
-                    className={`px-3.5 py-[7px] text-[11px] border-l-2 ${
+                    className={`px-3.5 py-1.75 text-[11px] border-l-2 ${
                       i === 0
                         ? "text-ky-accent bg-ky-accent/12 border-l-ky-accent"
                         : "text-ky-faint border-l-transparent"
@@ -252,21 +252,21 @@ export default function App() {
               <div className="p-4">
                 <div className="grid grid-cols-4 gap-2.5 mb-3">
                   {[
-                    { v: "7", l: "Proveedores", c: "text-[#3B82F6]" },
-                    { v: "10", l: "Contratos", c: "text-[#22C55E]" },
-                    { v: "3", l: "Por vencer", c: "text-[#EF4444]" },
-                    { v: "$683K", l: "Valor", c: "text-[#6366F1]" },
+                    { v: "7", l: "Proveedores", c: "text-ky-accent" },
+                    { v: "10", l: "Contratos", c: "text-ky-green" },
+                    { v: "3", l: "Por vencer", c: "text-ky-red" },
+                    { v: "$683K", l: "Valor", c: "text-ky-indigo" },
                   ].map(({ v, l, c }) => (
                     <div
                       key={l}
-                      className="bg-ky-bg-alt border border-ky-border rounded-lg px-3 py-[9px]"
+                      className="bg-ky-bg-alt border border-ky-border rounded-lg px-3 py-2.25"
                     >
                       <div className={`text-sm font-bold ${c}`}>{v}</div>
                       <div className="text-[10px] text-ky-faint">{l}</div>
                     </div>
                   ))}
                 </div>
-                <div className="bg-ky-bg-alt border border-ky-border rounded-lg p-3 flex items-end gap-1.5 h-[110px]">
+                <div className="bg-ky-bg-alt border border-ky-border rounded-lg p-3 flex items-end gap-1.5 h-27.5">
                   {[45, 72, 58, 85, 63, 92, 78, 96].map((h, i) => (
                     <div
                       key={i}
@@ -282,7 +282,7 @@ export default function App() {
       </section>
 
       {/* Features */}
-      <section className="max-w-[1100px] mx-auto px-8 py-[72px]">
+      <section className="max-w-275 mx-auto px-8 py-18">
         <div className="text-center mb-12">
           <p className="text-[11px] font-bold text-ky-accent tracking-[0.12em] mb-3 m-0">
             CARACTERÍSTICAS
@@ -291,7 +291,7 @@ export default function App() {
             Todo lo que necesitas en una plataforma
           </h2>
         </div>
-        <div className="grid grid-cols-3 gap-[18px]">
+        <div className="grid grid-cols-3 gap-4.5">
           {FEATURES.map((f, i) => (
             <FeatureCard key={i} {...f} />
           ))}
@@ -300,7 +300,7 @@ export default function App() {
 
       {/* Roles */}
       <section className="bg-ky-bg-alt border-t border-b border-ky-border">
-        <div className="max-w-[1100px] mx-auto px-8 py-[72px]">
+        <div className="max-w-275 mx-auto px-8 py-18">
           <div className="text-center mb-12">
             <p className="text-[11px] font-bold text-ky-accent tracking-[0.12em] mb-3 m-0">
               ROLES
@@ -331,9 +331,9 @@ export default function App() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-[1100px] mx-auto px-8 py-[72px]">
+      <section className="max-w-275 mx-auto px-8 py-18">
         <div className="bg-gradient-to-br from-ky-card to-ky-bg-alt border border-ky-border-md rounded-[20px] px-16 py-14 text-center relative overflow-hidden">
-          <div className="absolute top-[-40%] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[radial-gradient(ellipse,rgba(59,130,246,0.07)_0%,transparent_70%)] pointer-events-none" />
+          <div className="absolute top-[-40%] left-1/2 -translate-x-1/2 w-150 h-100 bg-[radial-gradient(ellipse,rgba(59,130,246,0.07)_0%,transparent_70%)] pointer-events-none" />
           <h2 className="text-[32px] font-extrabold tracking-[-0.02em] mb-4 mt-0 relative text-ky-text">
             Listo para transformar tu gestión contractual
           </h2>
@@ -350,7 +350,7 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-ky-border max-w-[1100px] mx-auto px-8 py-7 flex items-center justify-between">
+      <footer className="border-t border-ky-border max-w-275 mx-auto px-8 py-7 flex items-center justify-between">
         <div className="flex items-baseline gap-1">
           <span className="text-[15px] font-extrabold text-ky-text">
             Kyōtei

@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import { SignupForm } from '@/components/ui/signup-form'
-import bannerSignup from '@/assets/banner-signup.webp'
+import { Link } from "react-router-dom";
+import { SignupForm } from "@/components/ui/signup-form";
+import bannerSignup from "@/assets/banner-signup.webp";
 
 export default function SignUp() {
   return (
@@ -27,17 +27,21 @@ export default function SignUp() {
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-black/10 backdrop-blur-[2px]" />
         <div className="absolute bottom-12 left-10 right-10">
           <div className="flex items-baseline gap-2 mb-3">
-            <span className="text-3xl font-extrabold tracking-[-0.03em] text-white">Kyōtei</span>
+            <span className="text-3xl font-extrabold tracking-[-0.03em] text-white">
+              Kyōtei
+            </span>
             <span className="text-base text-ky-accent">協定</span>
           </div>
-          <p className="text-sm text-white/70 leading-relaxed max-w-[340px]">
-            Cada organización merece tener el control total de sus proveedores y contratos — sin hojas de cálculo, sin recordatorios manuales, sin sorpresas al vencimiento.
+          <p className="text-sm text-white/70 leading-relaxed max-w-85">
+            Cada organización merece tener el control total de sus proveedores y
+            contratos — sin hojas de cálculo, sin recordatorios manuales, sin
+            sorpresas al vencimiento.
           </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
