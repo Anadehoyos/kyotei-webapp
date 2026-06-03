@@ -4,16 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 import { Login, SignUp, ProtectedRoute, PublicOnlyRoute } from "@/modules/auth";
-import {
-  DashboardLayout,
-  Dashboard,
-  Proveedores,
-  Contratos,
-  Alertas,
-  Reportes,
-  Usuarios,
-  Perfil,
-} from "@/modules/dashboard";
+import { DashboardLayout, Dashboard } from "@/modules/dashboard";
+import { Proveedores } from "@/modules/proveedores";
+import { Contratos } from "@/modules/contratos";
+import { Alertas } from "@/modules/alertas";
+import { Reportes } from "@/modules/reportes";
+import { Usuarios } from "@/modules/usuarios";
+import { Perfil } from "@/modules/perfil";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 createRoot(document.getElementById("root")!).render(
