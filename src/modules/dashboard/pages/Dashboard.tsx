@@ -1,26 +1,20 @@
-import { useEffect, useState } from "react";
-import { authService, type JwtPayload } from "@/modules/auth";
+import { SectionCards } from "../components/section-cards";
+import { ChartAreaInteractive } from "../components/chart-area-interactive";
+import { DataTable } from "../components/data-table";
+import data from "../data.json";
 
 export function Dashboard() {
-  const [user, setUser] = useState<JwtPayload | null>(null);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    authService
-      .me()
-      .then(setUser)
-      .finally(() => setLoading(false));
-  }, []);
-
-  if (loading) return <div>Cargando...</div>;
-  if (!user) return <div>Error al cargar usuario</div>;
-
   return (
-    <div className="bg-black text-amber-50">
-      <h1>
-        Welcome {user.firstName} {user.lastName}
-      </h1>
-      <p>Email: {user.email}</p>
-      <p>Rol: {user.role}</p>
+    <div className="flex flex-1 flex-col">
+      <div className="@container/main flex flex-1 flex-col gap-2">
+        <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+          <SectionCards />
+          <div className="px-4 lg:px-6">
+            <ChartAreaInteractive />
+          </div>
+          <DataTable data={data} />
+        </div>
+      </div>
     </div>
   );
 }
