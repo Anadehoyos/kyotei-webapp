@@ -4,7 +4,7 @@ import { Field, FieldDescription, FieldGroup, FieldLabel } from '@/components/ui
 import { Input } from '@/components/ui/input'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
-import { ProgressBar } from '../auth/progress-bar'
+import { ProgressBar } from '@/modules/auth/components/ProgressBar'
 
 interface RegisterFormData {
   // Step 1 — Organización

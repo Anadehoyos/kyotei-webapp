@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { LoginForm } from "@/components/ui/login-form";
 import bannerLogin from "@/assets/banner-login.webp";
+import { LoginForm } from "@/modules/auth/components/LoginForm";
 
 export default function Login() {
   return (

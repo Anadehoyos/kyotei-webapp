@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SignupForm } from "@/components/ui/signup-form";
+import { SignupForm } from "@/modules/auth/components/SignupForm";
 import bannerSignup from "@/assets/banner-signup.webp";
 
 export default function SignUp() {

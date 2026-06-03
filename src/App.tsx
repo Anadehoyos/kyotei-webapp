@@ -332,7 +332,7 @@ export default function App() {
 
       {/* CTA */}
       <section className="max-w-275 mx-auto px-8 py-18">
-        <div className="bg-gradient-to-br from-ky-card to-ky-bg-alt border border-ky-border-md rounded-[20px] px-16 py-14 text-center relative overflow-hidden">
+        <div className="bg-linear-to-br from-ky-card to-ky-bg-alt border border-ky-border-md rounded-[20px] px-16 py-14 text-center relative overflow-hidden">
           <div className="absolute top-[-40%] left-1/2 -translate-x-1/2 w-150 h-100 bg-[radial-gradient(ellipse,rgba(59,130,246,0.07)_0%,transparent_70%)] pointer-events-none" />
           <h2 className="text-[32px] font-extrabold tracking-[-0.02em] mb-4 mt-0 relative text-ky-text">
             Listo para transformar tu gestión contractual
