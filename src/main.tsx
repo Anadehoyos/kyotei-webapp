@@ -5,12 +5,12 @@ import "./index.css";
 import App from "./App.tsx";
 import { Login, SignUp, ProtectedRoute, PublicOnlyRoute } from "@/modules/auth";
 import { DashboardLayout, Dashboard } from "@/modules/dashboard";
-import { Proveedores } from "@/modules/proveedores";
-import { Contratos } from "@/modules/contratos";
-import { Alertas } from "@/modules/alertas";
-import { Reportes } from "@/modules/reportes";
-import { Usuarios } from "@/modules/usuarios";
-import { Perfil } from "@/modules/perfil";
+import { Suppliers } from "@/modules/suppliers";
+import { Contracts } from "@/modules/contracts";
+import { Alerts } from "@/modules/alerts";
+import { Reports } from "@/modules/reports";
+import { Users } from "@/modules/users";
+import { Profile } from "@/modules/profile";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 createRoot(document.getElementById("root")!).render(
@@ -28,12 +28,12 @@ createRoot(document.getElementById("root")!).render(
           <Route element={<ProtectedRoute />}>
             <Route element={<DashboardLayout />}>
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/proveedores" element={<Proveedores />} />
-              <Route path="/contratos" element={<Contratos />} />
-              <Route path="/alertas" element={<Alertas />} />
-              <Route path="/reportes" element={<Reportes />} />
-              <Route path="/usuarios" element={<Usuarios />} />
-              <Route path="/perfil" element={<Perfil />} />
+              <Route path="/proveedores" element={<Suppliers />} />
+              <Route path="/contratos" element={<Contracts />} />
+              <Route path="/alertas" element={<Alerts />} />
+              <Route path="/reportes" element={<Reports />} />
+              <Route path="/usuarios" element={<Users />} />
+              <Route path="/perfil" element={<Profile />} />
             </Route>
           </Route>
         </Routes>

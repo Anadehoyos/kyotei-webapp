@@ -10,7 +10,7 @@ function Field({ label, value }: { label: string; value: string }) {
   );
 }
 
-export function Perfil() {
+export function Profile() {
   const { user } = useOutletContext<{ user: JwtPayload }>();
 
   return (

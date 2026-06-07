@@ -1,7 +1,7 @@
-export function Usuarios() {
+export function Reports() {
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-semibold">Usuarios</h1>
+      <h1 className="text-2xl font-semibold">Reportes</h1>
       <p className="mt-2 text-sm text-muted-foreground">Pendiente.</p>
     </div>
   );
